@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearthhold — Household Budget</title>
+<meta name="description" content="Hearthhold is a calm, complete household budget planner: dashboard, transactions, envelopes, savings goals, bills and reports.">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAABAAAAAQBPJcTWAAAALUlEQVR4nGO82efFQEvAQlPTRy0YtWDUglELRi0YtWDUglELRi0YtWDUAioCAIimAi/XWEN3AAAAAElFTkSuQmCC">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="#/dashboard">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span class="brand-text">Hearthhold<small>household budget</small></span>
+    </a>
+    <nav class="nav" id="main-nav" aria-label="Sections">
+      <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+      <a href="#/transactions" data-route="transactions">Transactions</a>
+      <a href="#/budgets" data-route="budgets">Budgets</a>
+      <a href="#/goals" data-route="goals">Savings goals</a>
+      <a href="#/bills" data-route="bills">Bills &amp; calendar</a>
+      <a href="#/reports" data-route="reports">Reports</a>
+    </nav>
+    <div class="sidebar-card">
+      <p class="sidebar-card-title">November at a glance</p>
+      <p class="sidebar-card-big" id="side-left">$0 left</p>
+      <p class="sidebar-card-sub" id="side-sub">Loading your month…</p>
+    </div>
+    <p class="sidebar-foot">The Hartley household<br>Two earners, two kids, one calm ledger.</p>
+  </aside>
+
+  <div class="content">
+    <header class="topbar">
+      <a class="brand brand-top" href="#/dashboard">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span class="brand-text">Hearthhold</span>
+      </a>
+      <div class="topbar-month">
+        <button type="button" class="chip-btn" id="prev-month" aria-label="Previous month">‹</button>
+        <span id="month-label">November 2026</span>
+        <button type="button" class="chip-btn" id="next-month" aria-label="Next month">›</button>
+      </div>
+      <a class="btn btn-primary btn-small" href="#/transactions">+ Add entry</a>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <footer class="footer">
+      <p>Hearthhold keeps everything on this device — no account, no sync, no ads. Figures are the Hartley family's demo ledger in US dollars.</p>
+      <button type="button" class="btn btn-ghost btn-small" id="reset-data">Reset demo data</button>
+    </footer>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
